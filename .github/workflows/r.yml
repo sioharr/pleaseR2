@@ -32,7 +32,7 @@ jobs:
         run: install.packages("gapminder")
         shell: Rscript {0}
       - name: copy files
-        run: COPY RChecker.R /RChecker.R
+        run: COPY R_checker.R /R_checker.R
 # need to call the Rchecker file but i am not sure how to do that!
 #need to also copy the data over.  that should probably happen in unix commands
 # Copies your code file from your action repository to the filesystem path `/` of the container
