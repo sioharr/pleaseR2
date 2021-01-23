@@ -31,6 +31,14 @@ jobs:
       - name: Install gapminder
         run: install.packages("gapminder")
         shell: Rscript {0}
+      - name: copy files
+        run: COPY RChecker.R /RChecker.R
+# need to call the Rchecker file but i am not sure how to do that!
+#need to also copy the data over.  that should probably happen in unix commands
+# Copies your code file from your action repository to the filesystem path `/` of the container
+##COPY entrypoint.sh /entrypoint.sh
+# Code file to execute when the docker container starts up (`entrypoint.sh`)
+##ENTRYPOINT ["/entrypoint.sh"]        
 #      - name: Install dependencies
 #        run: install.packages(c("remotes","rcmdcheck"))
 #        run: |
