@@ -32,7 +32,7 @@ jobs:
         run: install.packages("gapminder")
         shell: Rscript {0}
       - name: copy files
-        run: cp R_checker.R /R_checker.R
+        run: cp ../../R_checker.R /R_checker.R
         shell: bash
 # need to call the Rchecker file but i am not sure how to do that!
 #need to also copy the data over.  that should probably happen in unix commands
