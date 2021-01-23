@@ -43,6 +43,10 @@ jobs:
       - name: copy files
         run: sudo cp R_checker.R /Users/Shared/R_checker.R
         shell: bash
+      - name: Run a Script
+        run: Rscript /Users/Shared/R_checker.R
+#        run: Rscript -e 'R_checker.R::script()'
+        #- run: Rscript run_job.R
 # need to call the Rchecker file but i am not sure how to do that!
 #need to also copy the data over.  that should probably happen in unix commands
 # Copies your code file from your action repository to the filesystem path `/` of the container
